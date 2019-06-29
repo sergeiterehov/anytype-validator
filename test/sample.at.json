@@ -50,6 +50,15 @@
         },
         "Widget.data[].cell[].nXCoord": {
             "$": "integer"
+        },
+        "Widget.data[].cell[].nYCoord": {
+            "$": "one_of",
+            "types": [
+                "Widget.data[].cell[].nYCoord(0)"
+            ]
+        },
+        "Widget.data[].cell[].nYCoord(0)": {
+            "$": "integer"
         }
     },
     "entry": {

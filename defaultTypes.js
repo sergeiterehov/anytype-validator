@@ -74,6 +74,30 @@ const validateArray = (types, type, uses, path, target, props) => {
     }
 };
 
+const validateOneOf = (types, type, uses, path, target, props) => {
+    if (target === undefined || target === null) {
+        if (uses === Uses.Required) {
+            return `${path} is required`;
+        } else if (uses === Uses.Option) {
+            return;
+        }
+    }
+
+    const list = props.list;
+
+    const error = list.reduce((error, typeName, i) => {
+        if (error) {
+            return error;
+        }
+
+        return validate(types, typeName, Uses.Required, `${path}(${i})`, target, {});
+    }, undefined);
+
+    if (error) {
+        return error;
+    }
+};
+
 const validateInteger = (types, type, uses, path, target, props) => {
     if (target === undefined || target === null) {
         if (uses === Uses.Required) {
@@ -93,6 +117,7 @@ const defaultTypes = {
     integer: { validator: validateInteger },
     object: { validator: validateObject },
     array: { validator: validateArray },
+    one_of: { validator: validateOneOf },
 };
 
 module.exports = {
