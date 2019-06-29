@@ -1,0 +1,20 @@
+{
+  "name": "supertype",
+  "version": "1.0.0",
+  "description": "Anytypes validation system",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node index.spec.js"
+  },
+  "keywords": [
+    "anytype",
+    "schema",
+    "validation",
+    "validator"
+  ],
+  "author": "Sergey Terekhov",
+  "license": "ISC"
+}

@@ -1,0 +1,59 @@
+{
+    "types": {
+        "document": {
+            "$": "object",
+            "fields": [
+                {
+                    "name": "widget",
+                    "uses": "required",
+                    "type": "Widget"
+                }
+            ]
+        },
+        "Widget": {
+            "$": "object",
+            "fields": [
+                {
+                    "name": "data",
+                    "uses": "required",
+                    "type": "Widget.data"
+                }
+            ]
+        },
+        "Widget.data": {
+            "$": "array",
+            "type": "Widget.data[]"
+        },
+        "Widget.data[]": {
+            "$": "object",
+            "fields": [
+                {
+                    "name": "cell",
+                    "uses": "required",
+                    "type": "Widget.data[].cell"
+                }
+            ]
+        },
+        "Widget.data[].cell": {
+            "$": "array",
+            "type": "Widget.data[].cell[]"
+        },
+        "Widget.data[].cell[]": {
+            "$": "object",
+            "fields": [
+                {
+                    "name": "nXCoord",
+                    "uses": "required",
+                    "type": "Widget.data[].cell[].nXCoord"
+                }
+            ]
+        },
+        "Widget.data[].cell[].nXCoord": {
+            "$": "integer"
+        }
+    },
+    "entry": {
+        "uses": "required",
+        "type": "document"
+    }
+}
