@@ -9,10 +9,11 @@
                         "object": [
                             {
                                 "sObjectType": "deviation",
-                                "fValue": 123.12,
+                                "sName": "sample widget",
+                                "fValue": 123.23,
                                 "arrow": [
                                     {
-                                        "isGood": 1,
+                                        "isGood": -1,
                                         "nDirection": -1
                                     }
                                 ]
