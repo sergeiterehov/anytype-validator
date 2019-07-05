@@ -1,6 +1,6 @@
 {
-  "name": "supertype",
-  "version": "1.0.0",
+  "name": "anytype-validator",
+  "version": "1.0.1",
   "description": "Anytypes validation system",
   "main": "index.js",
   "directories": {
@@ -16,5 +16,8 @@
     "validator"
   ],
   "author": "Sergey Terekhov",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "xml2js": "^0.4.19"
+  }
 }
