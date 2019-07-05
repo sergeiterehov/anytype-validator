@@ -1,8 +1,5 @@
-const Uses = {
-    Required: "required",
-    Option: "option",
-};
+const { validate } = require("./validate");
 
 module.exports = {
-    Uses,
+    validate,
 };

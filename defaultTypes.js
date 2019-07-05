@@ -1,5 +1,9 @@
 const util = require("util");
-const { Uses } = require("./index");
+
+const Uses = {
+    Required: "required",
+    Option: "option",
+};
 
 const validate = (types, typeName, uses, path, target, props) => {
     const type = types[typeName];
@@ -178,4 +182,5 @@ const defaultTypes = {
 
 module.exports = {
     defaultTypes,
+    Uses,
 };

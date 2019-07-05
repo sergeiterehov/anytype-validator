@@ -1,15 +1,11 @@
 const fs = require("fs");
-const { Uses } = require("./index");
-const { defaultTypes } = require("./defaultTypes");
+const { Uses, validate } = require("./index");
 
-const src = "../anytype/test/Widget.at.json" || "./test/sample.at.json";
+const src = "./test/sample.at.json";
 const schema = JSON.parse(fs.readFileSync(src));
 
 const target = JSON.parse(fs.readFileSync("./test/sample.json"));
 
-const error = defaultTypes.$.validator({
-    ...defaultTypes,
-    ...schema.types,
-}, "$", Uses.Required, "$", target, {});
+const error = validate(schema, target);
 
 console.log(error);
