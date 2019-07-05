@@ -67,6 +67,14 @@ const validateArrayOf = (types, type, uses, path, target, props) => {
         return `${path} must be array`;
     }
 
+    if (props.limits) {
+        const [min, max] = props.limits;
+
+        if (target.length < min || target.length > max) {
+            return `${path} must contains no more then ${max} and more less ${min} elements`;
+        }
+    }
+
     const error = target.reduce((error, item, i) => {
         if (error) {
             return error;
