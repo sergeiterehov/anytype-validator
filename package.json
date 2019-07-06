@@ -1,7 +1,11 @@
 {
   "name": "anytype-validator",
-  "version": "1.0.2",
-  "description": "Anytypes validation system",
+  "version": "1.0.3",
+  "description": "Validator for .at format",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sergeiterehov/anytype-validator.git"
+  },
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -12,7 +16,7 @@
   "keywords": [
     "anytype",
     "schema",
-    "validation",
+    "json",
     "validator"
   ],
   "author": "Sergey Terekhov",
