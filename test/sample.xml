@@ -1,0 +1,72 @@
+<widget nWidgetID="2350" nWidgetTypeID="51"
+    sWidgetName_RU="Универсальная карточка с очень длинным заголовком, который должен уместиться в две строки"
+    sWidgetName_EN="Универсальная карточка с очень длинным заголовком, который должен уместиться в две строки"
+    nXCoord="0" nYCoord="0" nWidth="1" nHeight="1" nViewType="1" nWidgetNameMaxLineCount="2">
+    <data nWidth="3" nHeight="3" sMeasureName_RU="%" fColumnImpact="0.3">
+        <cell nXCoord="0" nYCoord="0">
+            <object sObjectType="value" fValue="1.2345" nPrecision="2" sMeasureName_RU="₽" sName="Факт 2018" />
+            <actions>
+                <action nType="10" resultState="WARNING" resultText_RU="Действие в ячейке 0 0!"
+                    resultText_EN="cell 0 0" />
+            </actions>
+        </cell>
+        <cell nXCoord="1" nYCoord="0">
+            <object sObjectType="value" fValue="7.777" nPrecision="0" sMeasureName_RU="$" sName="Прогноз 1Q'20" />
+            <actions>
+                <action nType="10" resultState="WARNING" resultText_RU="Действие в ячейке 1 0!"
+                    resultText_EN="cell 1 0" />
+            </actions>
+        </cell>
+        <cell nXCoord="2" nYCoord="0">
+            <object sObjectType="value" fValue="0.01" nPrecision="3" sMeasureName_RU="п.п." sName="Уровень надоев" />
+            <actions>
+                <action nType="10" resultState="WARNING" resultText_RU="Действие в ячейке 2 0!"
+                    resultText_EN="cell 2 0" />
+            </actions>
+        </cell>
+        <cell nXCoord="0" nYCoord="1">
+            <object sObjectType="deviation" fValue="6" nPrecision="0" sMeasureName_RU="шт" sName="Увеличение"
+                isGood="1" />
+            <actions>
+                <action nType="10" resultState="WARNING" resultText_RU="Действие в ячейке 0 1!"
+                    resultText_EN="cell 0 1" />
+            </actions>
+        </cell>
+        <cell nXCoord="1" nYCoord="1">
+            <object sObjectType="deviation" fValue="-2.765555" nPrecision="1" sMeasureName_RU="%" sName="к Плану 2019"
+                isGood="-1">
+                <arrow isGood="1" nDirection="1" />
+            </object>
+            <actions>
+                <action nType="10" resultState="WARNING" resultText_RU="Действие в ячейке 1 1!"
+                    resultText_EN="cell 1 1" />
+            </actions>
+        </cell>
+        <cell nXCoord="2" nYCoord="1">
+            <object sObjectType="deviation" fValue="-0.2" nPrecision="1" sMeasureName_RU="%" sName="к Прогнозу Май 2020"
+                isGood="1">
+                <arrow isGood="1" nDirection="-1" />
+            </object>
+            <actions>
+                <action nType="10" resultState="WARNING" resultText_RU="Действие в ячейке 2 1!"
+                    resultText_EN="cell 2 1" />
+            </actions>
+        </cell>
+        <cell nXCoord="2" nYCoord="2">
+            <object sObjectType="value" fValue="66.6" nPrecision="0" sMeasureName_RU="цена на нефть (Brent $)"
+                sName="Очень длинный элемент оси, который никуда не хочет влезать" />
+            <actions>
+                <action nType="10" resultState="WARNING" resultText_RU="Действие в ячейке 2 2!"
+                    resultText_EN="cell 2 2" />
+            </actions>
+        </cell>
+        <line nYCoordFrom="1" />
+        <line nYCoordFrom="2" />
+        <actions>
+            <action sPosition="topRight" nType="10" resultState="WARNING" resultText_RU="Действие в вернем правом углу!"
+                resultText_EN="topRight" />
+            <action sPosition="whole" nType="10" resultState="WARNING" resultText_RU="Действие в заголовке!"
+                resultText_EN="whole" />
+        </actions>
+    </data>
+</widget>

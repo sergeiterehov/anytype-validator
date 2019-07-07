@@ -1,8 +1,9 @@
-const { defaultTypes, Uses } = require("./defaultTypes");
+// @ts-check
+const { validators, validator, Uses } = require("./validators");
 
 const validate = (schema, target, additionalTypes = {}) => {
-    return defaultTypes.$.validator({
-        ...defaultTypes,
+    return validator({
+        ...validators,
         ...schema.types,
         ...additionalTypes,
     }, "$", Uses.Required, "$", target, {});;

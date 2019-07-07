@@ -1,5 +1,13 @@
-const { validate } = require("./validate");
-
 module.exports = {
-    validate,
+    ...require("./validate"),
+
+    validator: {
+        ...require("./adapters/json"),
+        ...require("./adapters/xml"),
+    },
+
+    parser: {
+        ...require("./parsers/json"),
+        ...require("./parsers/xml"),
+    },
 };

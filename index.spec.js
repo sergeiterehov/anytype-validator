@@ -1,11 +1,18 @@
 const fs = require("fs");
-const { Uses, validate } = require("./index");
+const validator = require("./");
 
-const src = "./test/sample.at.json";
-const schema = JSON.parse(fs.readFileSync(src));
+const schemaFile = "./test/sample.at.json";
+const targetDataFile = "./test/sample.json";
 
-const target = JSON.parse(fs.readFileSync("./test/sample.json"));
+const jsonSchema = fs.readFileSync(schemaFile);
+const jsonTarget = fs.readFileSync(targetDataFile);
 
-const error = validate(schema, target);
+const xmlTarget = fs.readFileSync("./test/sample.xml");
 
-console.log(error);
+const schema = validator.parser.json(jsonSchema);
+
+const errorJson = validator.validator.json(schema, jsonTarget);
+console.log("JSON", errorJson);
+
+const errorXml = validator.validator.xml(schema, xmlTarget);
+errorXml.then((error) => console.log("XML", error));

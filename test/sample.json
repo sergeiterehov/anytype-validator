@@ -13,7 +13,7 @@
                                 "fValue": 123.23,
                                 "arrow": [
                                     {
-                                        "isGood": -1,
+                                        "isGood": 1,
                                         "nDirection": -1
                                     }
                                 ]

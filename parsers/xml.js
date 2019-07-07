@@ -18,13 +18,14 @@ const mapIt = (data) => {
         });
 
         return object;
+    } else if (util.isString(data) && /\-?\d+(\.\d+)?/.test(data)) {
+        return Number(data);
     }
 
-    // TODO: check numbers...
     return data;
 };
 
-const xmlToObject = (xml) => {
+const xml = (xml) => {
     return new Promise((done, cancel) => {
         parseString(xml, (err, data) => {
             if (err) {
@@ -37,5 +38,5 @@ const xmlToObject = (xml) => {
 };
 
 module.exports = {
-    xmlToObject,
+    xml,
 };
