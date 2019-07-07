@@ -18,7 +18,7 @@ const mapIt = (data) => {
         });
 
         return object;
-    } else if (util.isString(data) && /\-?\d+(\.\d+)?/.test(data)) {
+    } else if (util.isString(data) && /^\-?\d+(\.\d+)?$/.test(data)) {
         return Number(data);
     }
 

@@ -15,4 +15,4 @@ const errorJson = validator.validator.json(schema, jsonTarget);
 console.log("JSON", errorJson);
 
 const errorXml = validator.validator.xml(schema, xmlTarget);
-errorXml.then((error) => console.log("XML", error));
+errorXml.then((error) => console.log("XML", error)).catch(console.error);
